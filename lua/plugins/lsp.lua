@@ -17,6 +17,7 @@ return {
     config = function()
         local autoformat_filetypes = {
             "lua",
+            "cs"
         }
         -- Create a keymap for vim.lsp.buf.implementation
         vim.api.nvim_create_autocmd('LspAttach', {
@@ -103,6 +104,7 @@ return {
                 "ts_ls",
                 "eslint",
                 "pyright",
+                "omnisharp"
             },
             handlers = {
                 function(server_name)

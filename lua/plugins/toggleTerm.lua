@@ -9,7 +9,7 @@ return
             require("toggleterm").setup({
                 direction = "horizontal",
                 size = function(term)
-                    return math.floor(vim.o.lines * 0.2)
+                    return math.floor(vim.o.lines * 0.4)
                 end,
                 open_mapping = [[<C-\>]],
                 shade_terminals = false,
