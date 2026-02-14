@@ -17,10 +17,12 @@ return {
         -- Lua
         lua = { "stylua" },
 
-        -- Add new languages here 👇
         -- python = { "black" },
         javascript = { "prettier" },
         typescript = { "prettier" },
+
+        -- c#
+        csharp = { "omnisharp" },
         -- go = { "gofmt" },
       },
     },
