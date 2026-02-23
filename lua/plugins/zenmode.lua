@@ -1,6 +1,6 @@
 return {
   "folke/zen-mode.nvim",
   opts = {
-	backdrop = 0.95,
-  }
+    backdrop = 0.95,
+  },
 }
