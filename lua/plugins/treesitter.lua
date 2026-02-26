@@ -34,5 +34,9 @@ return {
     vim.o.foldlevel = 99
     vim.o.foldlevelstart = 99
     vim.o.foldenable = true
+
+    vim.keymap.set("n", "<leader>zo", "zR", { desc = "Open all folds" })
+
+    vim.keymap.set("n", "<leader>zc", "zM", { desc = "Close all folds" })
   end,
 }

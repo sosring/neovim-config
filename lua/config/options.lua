@@ -1,4 +1,4 @@
-vim.opt.number = true
+vim.opt.number = false
 vim.opt.cursorline = true
 vim.opt.relativenumber = true
 
