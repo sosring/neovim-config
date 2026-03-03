@@ -10,7 +10,7 @@ return {
         size = function(term)
           return math.floor(vim.o.lines * 0.4)
         end,
-        open_mapping = [[<C-j>]],
+        open_mapping = [[<C-\>]],
         shade_terminals = false,
         start_in_insert = true,
         persist_size = true,

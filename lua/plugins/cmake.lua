@@ -7,7 +7,7 @@ return {
         name = "quickfix",
       },
       cmake_runner = {
-        name = "quickfix",
+        name = "toggleterm",
       },
       cmake_generate_options = {
         "-DCMAKE_EXPORT_COMPILE_COMMANDS=1",
