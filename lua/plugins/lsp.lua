@@ -20,11 +20,11 @@ vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" }
 -- Show diagnostic float automatically when cursor rests on a line
 vim.o.updatetime = 300 -- ms before CursorHold fires (default 4000 is too slow)
 
-vim.api.nvim_create_autocmd("CursorHold", {
-  callback = function()
-    vim.diagnostic.open_float(nil, { focus = false })
-  end,
-})
+-- vim.api.nvim_create_autocmd("CursorHold", {
+--   callback = function()
+--     vim.diagnostic.open_float(nil, { focus = false })
+--   end,
+-- })
 
 return {
   {

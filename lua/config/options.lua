@@ -13,5 +13,7 @@ vim.opt.ignorecase = true
 
 vim.opt.smartcase = true
 
-vim.keymap.set("n", "j", "j^")
-vim.keymap.set("n", "k", "k^")
+-- vim.keymap.set("n", "j", "j^")
+-- vim.keymap.set("n", "k", "k^")
+
+-- vim.g.man_open_mode = "vsplit"
