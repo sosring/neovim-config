@@ -35,25 +35,29 @@ return {
         cmd = { "clangd", "--compile-commands-dir=." },
         capabilities = capabilities,
       })
-
       -- Lua
       vim.lsp.config("lua_ls", {
         cmd = { "lua-language-server" },
         capabilities = capabilities,
       })
-
       -- C#
       vim.lsp.config("omnisharp", {
         cmd = { "omnisharp", "--languageserver", "--hostPID", tostring(vim.fn.getpid()) },
         capabilities = capabilities,
         root_dir = vim.loop.cwd,
       })
+      -- GLSL                        ← add this
+      vim.lsp.config("glsl_analyzer", {
+        cmd = { "glsl_analyzer" },
+        capabilities = capabilities,
+        filetypes = { "glsl" },
+      })
 
-      -- Enable the servers
       vim.lsp.enable("clangd")
       vim.lsp.enable("lua_ls")
-      vim.lsp.enable("omnisharp") -- was missing
-    end, -- was missing
+      vim.lsp.enable("omnisharp")
+      vim.lsp.enable("glsl_analyzer") -- ← add this
+    end,
   },
   {
     "williamboman/mason.nvim",

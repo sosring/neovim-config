@@ -11,6 +11,7 @@ return {
         "cpp", -- since you're working with C++
         "c",
         "javascript",
+        "glsl",
       },
 
       highlight = {
