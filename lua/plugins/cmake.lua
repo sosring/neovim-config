@@ -1,5 +1,5 @@
 return {
-  "Ciskjsskjitasv/cmake-tools.nvim",
+  "Civitasv/cmake-tools.nvim",
   dependencies = { "nvim-lua/plenary.nvim" },
   config = function()
     require("cmake-tools").setup({
@@ -8,6 +8,9 @@ return {
       },
       cmake_runner = {
         name = "toggleterm",
+        opts = {
+          cwd = vim.fn.getcwd(),
+        },
       },
       cmake_generate_options = {
         "-DCMAKE_EXPORT_COMPILE_COMMANDS=1",

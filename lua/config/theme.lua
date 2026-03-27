@@ -11,13 +11,23 @@ M.themes = {
     name = "mellifluous",
     bg = "dark",
   },
-  vesper = {
-    plugin = "datsfilipe/vesper.nvim",
-    name = "vesper",
+  miasma = {
+    plugin = "xero/miasma.nvim",
+    name = "miasma",
+    bg = "dark",
+  },
+  oldworld = {
+    plugin = "dgox16/oldworld.nvim",
+    name = "oldworld",
+    bg = "dark",
+  },
+  kanagawa = {
+    plugin = "thesimonho/kanagawa-paper.nvim",
+    name = "kanagawa-paper",
     bg = "dark",
   },
 }
 
-M.active = M.themes.mellifluous
+M.active = M.themes.kanagawa
 
 return M

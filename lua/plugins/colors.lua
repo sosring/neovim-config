@@ -64,7 +64,7 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {
       options = {
-        theme = active_theme.name,
+        theme = "auto",
         component_separators = "",
         section_separators = "",
       },

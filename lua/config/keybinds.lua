@@ -1,22 +1,49 @@
+-- Leader
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>cd", vim.cmd.Ex)
-vim.keymap.set("n", "<M-m>", ":ZenMode<CR>", { desc = "Toggle Zen Mode" })
-vim.keymap.set("i", "jj", "<Esc>", { desc = "Toggle Zen Mode" })
+
+-- Shortcuts helper
+local map = vim.keymap.set
+local opts = { noremap = true, silent = true }
+
+-- File explorer
+map("n", "<leader>cd", vim.cmd.Ex, { desc = "Open file explorer" })
+
+-- Zen mode
+map("n", "<M-m>", "<Cmd>ZenMode<CR>", { desc = "Toggle Zen Mode" })
+map("i", "jj", "<Esc>", { desc = "Exit insert mode" })
 
 -- Split Window
-vim.keymap.set("n", "vp", function()
+map("n", "vp", function()
   vim.cmd("vsplit")
   vim.cmd("wincmd l")
 end, { desc = "Vertical split" })
 
-vim.keymap.set("n", "sp", function()
+map("n", "sp", function()
   vim.cmd("split")
   vim.cmd("wincmd j")
 end, { desc = "Horizontal split" })
 
-vim.keymap.set("n", "<Tab>", "<C-w>w", { silent = true })
--- vim.keymap.set("n", "<S-Tab>", "<C-w>W", { silent = true })
+-- Window navigation
+map("n", "<Tab>", "<C-w>w", { desc = "Next window" })
+map("n", "<S-Tab>", "<C-w>W", { desc = "Previous window" })
 
-vim.keymap.set("n", "<leader>cg", "<cmd>CMakeGenerate<CR>", { desc = "CMake Generate" })
-vim.keymap.set("n", "<leader>cb", "<cmd>CMakeBuild<CR>", { desc = "CMake Build" })
-vim.keymap.set("n", "<leader>cr", "<cmd>CMakeRun<CR>", { desc = "CMake Run" })
+-- CMake
+map("n", "<leader>cg", "<cmd>CMakeGenerate<CR>", { desc = "CMake Generate" })
+map("n", "<leader>cb", "<cmd>CMakeBuild<CR>", { desc = "CMake Build" })
+map("n", "<leader>cr", "<cmd>CMakeRun<CR>", { desc = "CMake Run" })
+
+-- Barbar buffer navigation
+
+-- Mac-style (Cmd)
+map("n", "<D-[>", "<Cmd>BufferPrevious<CR>", { desc = "Previous buffer" })
+map("n", "<D-]>", "<Cmd>BufferNext<CR>", { desc = "Next buffer" })
+
+-- Fallback (Alt) for terminal compatibility
+map("n", "<A-[>", "<Cmd>BufferPrevious<CR>", { desc = "Previous buffer (alt)" })
+map("n", "<A-]>", "<Cmd>BufferNext<CR>", { desc = "Next buffer (alt)" })
+
+-- Close buffer
+map("n", "<A-w>", "<Cmd>BufferClose<CR>", { desc = "Close buffer" })
+
+-- Tab New
+map("n", "<A-n>", "<Cmd>tabnew<CR>", { desc = "New Tab" })
