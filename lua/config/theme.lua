@@ -11,23 +11,25 @@ M.themes = {
     name = "mellifluous",
     bg = "dark",
   },
-  miasma = {
-    plugin = "xero/miasma.nvim",
-    name = "miasma",
-    bg = "dark",
-  },
-  oldworld = {
-    plugin = "dgox16/oldworld.nvim",
-    name = "oldworld",
-    bg = "dark",
-  },
   kanagawa = {
     plugin = "thesimonho/kanagawa-paper.nvim",
     name = "kanagawa-paper",
     bg = "dark",
   },
+  -- Newspaper style
+  dookie = {
+    plugin = "pebeto/dookie.nvim",
+    name = "dookie",
+    bg = "dark",
+  },
+  -- crt style
+  mfd = {
+    plugin = "kungfusheep/mfd.nvim",
+    name = "MFD-FLIR",
+    bg = "dark",
+  },
 }
 
-M.active = M.themes.kanagawa
+M.active = M.themes.mfd
 
 return M

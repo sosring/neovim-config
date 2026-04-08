@@ -13,15 +13,15 @@ map("n", "<M-m>", "<Cmd>ZenMode<CR>", { desc = "Toggle Zen Mode" })
 map("i", "jj", "<Esc>", { desc = "Exit insert mode" })
 
 -- Split Window
-map("n", "vp", function()
-  vim.cmd("vsplit")
-  vim.cmd("wincmd l")
-end, { desc = "Vertical split" })
-
-map("n", "sp", function()
-  vim.cmd("split")
-  vim.cmd("wincmd j")
-end, { desc = "Horizontal split" })
+-- map("n", "vp", function()
+--   vim.cmd("vsplit")
+--   vim.cmd("wincmd l")
+-- end, { desc = "Vertical split" })
+--
+-- map("n", "sp", function()
+--   vim.cmd("split")
+--   vim.cmd("wincmd j")
+-- end, { desc = "Horizontal split" })
 
 -- Window navigation
 map("n", "<Tab>", "<C-w>w", { desc = "Next window" })

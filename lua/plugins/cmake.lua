@@ -7,9 +7,11 @@ return {
         name = "quickfix",
       },
       cmake_runner = {
-        name = "toggleterm",
+        name = "quickfix",
         opts = {
-          cwd = vim.fn.getcwd(),
+          cwd = function()
+            return vim.fn.getcwd() -- This already does the right thing IF cwd is synced
+          end,
         },
       },
       cmake_generate_options = {

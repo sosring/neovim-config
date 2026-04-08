@@ -45,7 +45,7 @@ local function apply_theme(t)
   end
 
   vim.cmd.colorscheme(t.name)
-  enable_transparency()
+  -- enable_transparency()
 end
 
 return {
@@ -54,9 +54,9 @@ return {
     priority = 1000,
     config = function()
       apply_theme(active_theme)
-      vim.api.nvim_create_autocmd("ColorScheme", {
-        callback = enable_transparency,
-      })
+      -- vim.api.nvim_create_autocmd("ColorScheme", {
+      --   callback = enable_transparency,
+      -- })
     end,
   },
   {
