@@ -31,18 +31,18 @@ local function apply_theme(t)
   vim.o.background = t.bg
 
   -- mellifluous requires setup BEFORE colorscheme is set
-  if t.name == "mellifluous" then
-    require("mellifluous").setup({
-      transparent_background = {
-        enabled = true,
-        floating_windows = true,
-        telescope = true,
-        file_tree = true,
-        cursor_line = true,
-        status_line = false, -- lualine handles this
-      },
-    })
-  end
+  -- if t.name == "mellifluous" then
+  --   require("mellifluous").setup({
+  --     transparent_background = {
+  --       enabled = true,
+  --       floating_windows = true,
+  --       telescope = true,
+  --       file_tree = true,
+  --       cursor_line = true,
+  --       status_line = false, -- lualine handles this
+  --     },
+  --   })
+  -- end
 
   vim.cmd.colorscheme(t.name)
   -- enable_transparency()

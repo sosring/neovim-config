@@ -28,8 +28,13 @@ M.themes = {
     name = "MFD-FLIR",
     bg = "dark",
   },
+  koda = {
+    plugin = "oskarnurm/koda.nvim",
+    name = "koda",
+    bg = "dark",
+  },
 }
 
-M.active = M.themes.mfd
+M.active = M.themes.koda
 
 return M
