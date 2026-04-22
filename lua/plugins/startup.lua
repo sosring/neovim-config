@@ -51,7 +51,7 @@ return {
         title = "Quick Access",
         margin = 5,
         content = {
-          { "󰦄 Report", "edit ~/documents/markdown/report.md", "1" },
+          { "Markdown", "cd ~/documents/markdown | edit .", "1" },
           { "SDL", "cd ~/documents/sdl | edit .", "2" },
           { "OpenGL", "cd ~/documents/opengl | edit .", "3" },
           { "Nvim Config", "cd ~/.config/nvim | edit .", "4" },
@@ -92,10 +92,10 @@ return {
         open_help = "?",
       },
 
-      colors = {
-        background = "#1a1b26",
-        folded_section = "#56b6c2",
-      },
+      -- colors = {
+      --   background = "#1a1b26",
+      --   folded_section = "#56b6c2",
+      -- },
 
       parts = { "header", "body", "footer" },
     })

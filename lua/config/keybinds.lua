@@ -6,7 +6,7 @@ local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
 -- File explorer
-map("n", "<leader>cd", vim.cmd.Ex, { desc = "Open file explorer" })
+-- map("n", "<leader>cd", vim.cmd.Ex, { desc = "Open file explorer" })
 
 -- Zen mode
 map("n", "<M-m>", "<Cmd>ZenMode<CR>", { desc = "Toggle Zen Mode" })
