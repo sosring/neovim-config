@@ -1,40 +1,26 @@
 local M = {}
 
 M.themes = {
-  melange = {
-    plugin = "savq/melange-nvim",
-    name = "melange",
-    bg = "dark",
-  },
-  mellifluous = {
-    plugin = "ramojus/mellifluous.nvim",
-    name = "mellifluous",
-    bg = "dark",
-  },
-  kanagawa = {
-    plugin = "thesimonho/kanagawa-paper.nvim",
-    name = "kanagawa-paper",
-    bg = "dark",
-  },
-  -- Newspaper style
-  dookie = {
-    plugin = "pebeto/dookie.nvim",
-    name = "dookie",
-    bg = "dark",
-  },
   -- crt style
   mfd = {
     plugin = "kungfusheep/mfd.nvim",
-    name = "MFD-FLIR",
+    name = "MFD-FLIR-BH",
     bg = "dark",
   },
+  -- Monochrome yellow
   koda = {
     plugin = "oskarnurm/koda.nvim",
     name = "koda",
     bg = "dark",
   },
+  -- Kanagawa
+  kanagawa = {
+    plugin = "rebelot/kanagawa.nvim",
+    name = "kanagawa-dragon",
+    bg = "dark",
+  },
 }
 
-M.active = M.themes.koda
+M.active = M.themes.mfd
 
 return M

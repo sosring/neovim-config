@@ -2,7 +2,7 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 
 -- Diagnostic display configuration
 vim.diagnostic.config({
-  virtual_text = false, -- shows error text inline at end of line
+  virtual_text = true, -- shows error text inline at end of line
   signs = true, -- gutter signs (E, W, I, H)
   underline = true,
   update_in_insert = false,

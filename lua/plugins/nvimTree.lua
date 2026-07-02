@@ -30,6 +30,6 @@ return {
     })
 
     -- Keymap
-    vim.keymap.set("n", "<M-f>", ":NvimTreeToggle<CR>", { silent = true })
+    vim.keymap.set("n", "<leader>cd", ":NvimTreeToggle<CR>", { silent = true })
   end,
 }

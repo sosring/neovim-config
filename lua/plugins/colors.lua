@@ -22,52 +22,52 @@ local function enable_transparency()
     "TelescopeNormal",
     "TelescopeBorder",
   }
-  for _, g in ipairs(groups) do
-    vim.api.nvim_set_hl(0, g, { bg = "none" })
+
+  for _, group in ipairs(groups) do
+    vim.api.nvim_set_hl(0, group, { bg = "none" })
   end
 end
 
 local function apply_theme(t)
   vim.o.background = t.bg
-
-  -- mellifluous requires setup BEFORE colorscheme is set
-  -- if t.name == "mellifluous" then
-  --   require("mellifluous").setup({
-  --     transparent_background = {
-  --       enabled = true,
-  --       floating_windows = true,
-  --       telescope = true,
-  --       file_tree = true,
-  --       cursor_line = true,
-  --       status_line = false, -- lualine handles this
-  --     },
-  --   })
-  -- end
-
   vim.cmd.colorscheme(t.name)
+
   -- enable_transparency()
 end
 
-return {
-  {
-    active_theme.plugin,
+local plugins = {}
+
+-- Add every colorscheme plugin
+for _, t in pairs(theme.themes) do
+  table.insert(plugins, {
+    t.plugin,
     priority = 1000,
-    config = function()
-      apply_theme(active_theme)
-      -- vim.api.nvim_create_autocmd("ColorScheme", {
-      --   callback = enable_transparency,
-      -- })
-    end,
-  },
-  {
-    "nvim-lualine/lualine.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    opts = {
-      options = {
-        theme = "auto",
-        component_separators = "",
-        section_separators = "",
-      },
+  })
+end
+
+-- Configure the active colorscheme
+table.insert(plugins, {
+  "nvim-lualine/lualine.nvim",
+  dependencies = { "nvim-tree/nvim-web-devicons" },
+  opts = {
+    options = {
+      theme = "auto",
+      component_separators = "",
+      section_separators = "",
     },
   },
-}
+})
+
+table.insert(plugins, {
+  active_theme.plugin,
+  priority = 1000,
+  config = function()
+    apply_theme(active_theme)
+
+    -- vim.api.nvim_create_autocmd("ColorScheme", {
+    --   callback = enable_transparency,
+    -- })
+  end,
+})
+
+return plugins
