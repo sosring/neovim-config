@@ -2,7 +2,7 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 
 -- Diagnostic display configuration
 vim.diagnostic.config({
-  virtual_text = false, -- shows error text inline at end of line
+  virtual_text = true, -- shows error text inline at end of line
   signs = true, -- gutter signs (E, W, I, H)
   underline = true,
   update_in_insert = false,
@@ -18,7 +18,7 @@ vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Prev diagnostic" }
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
 
 -- Show diagnostic float automatically when cursor rests on a line
-vim.o.updatetime = 300 -- ms before CursorHold fires (default 4000 is too slow)
+-- vim.o.updatetime = 300 -- ms before CursorHold fires (default 4000 is too slow)
 
 -- vim.api.nvim_create_autocmd("CursorHold", {
 --   callback = function()
