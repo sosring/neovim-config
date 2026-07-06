@@ -19,8 +19,20 @@ M.themes = {
     name = "kanagawa-dragon",
     bg = "dark",
   },
+  -- Oldworld
+  oldworld = {
+    plugin = "dgox16/oldworld.nvim",
+    name = "oldworld",
+    bg = "dark",
+  },
+  -- mellifluous
+  mellifluous = {
+    plugin = "ramojus/mellifluous.nvim",
+    name = "mellifluous",
+    bg = "dark",
+  },
 }
 
-M.active = M.themes.mfd
+M.active = M.themes.mellifluous
 
 return M

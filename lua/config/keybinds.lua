@@ -29,8 +29,8 @@ map("n", "<S-Tab>", "<C-w>W", { desc = "Previous window" })
 
 -- CMake
 map("n", "<leader>cg", "<cmd>CMakeGenerate<CR>", { desc = "CMake Generate" })
-map("n", "<leader>cb", "<cmd>CMakeBuild<CR>", { desc = "CMake Build" })
-map("n", "<leader>cr", "<cmd>CMakeRun<CR>", { desc = "CMake Run" })
+map("n", "<D-b>", "<cmd>CMakeBuild<CR>", { desc = "CMake Build" })
+map("n", "<D-r>", "<cmd>CMakeRun<CR>", { desc = "CMake Run" })
 
 -- Barbar buffer navigation
 
@@ -57,3 +57,5 @@ map("n", "<C-6>", "<Cmd>BufferGoto 6<CR>")
 map("n", "<C-7>", "<Cmd>BufferGoto 7<CR>")
 map("n", "<C-8>", "<Cmd>BufferGoto 8<CR>")
 map("n", "<C-9>", "<Cmd>BufferGoto 9<CR>")
+
+map("n", "<D-s>", "<Cmd>:w <CR>")

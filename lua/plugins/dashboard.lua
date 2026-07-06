@@ -63,7 +63,7 @@ return {
               desc = " Graphics",
               key = "2",
               key_format = "[%s]",
-              action = "cd ~/documents/opengl | edit .",
+              action = "cd ~/documents/graphics | edit .",
             },
             {
               icon = "󰈔 ",
